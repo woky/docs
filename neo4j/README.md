@@ -14,6 +14,8 @@ WARNING:
 
 -->
 
+**Note:** this is the "per-architecture" repository for the `arm64v8` builds of [the `neo4j` official image](https://hub.docker.com/_/neo4j) -- for more information, see ["Architectures other than amd64?" in the official images documentation](https://github.com/docker-library/official-images#architectures-other-than-amd64) and ["An image's source changed in Git, now what?" in the official images FAQ](https://github.com/docker-library/faq#an-images-source-changed-in-git-now-what).
+
 # Quick reference
 
 -	**Maintained by**:  
@@ -28,8 +30,8 @@ WARNING:
 -	[`5.1.0-enterprise`, `5.1-enterprise`, `5-enterprise`, `enterprise`](https://github.com/neo4j/docker-neo4j-publish/blob/40a0188175a855bf184b0f7c62475b81ee10e028/5.1.0/enterprise/Dockerfile)
 -	[`4.4.14`, `4.4.14-community`, `4.4`, `4.4-community`](https://github.com/neo4j/docker-neo4j-publish/blob/4fa20d1e2f3df13633989e655de0834f0309f24c/4.4.14/community/Dockerfile)
 -	[`4.4.14-enterprise`, `4.4-enterprise`](https://github.com/neo4j/docker-neo4j-publish/blob/4fa20d1e2f3df13633989e655de0834f0309f24c/4.4.14/enterprise/Dockerfile)
--	[`4.3.21`, `4.3.21-community`, `4.3`, `4.3-community`](https://github.com/neo4j/docker-neo4j-publish/blob/81af52f8bfbf341523797c437696a58ae6578af7/4.3.21/community/Dockerfile)
--	[`4.3.21-enterprise`, `4.3-enterprise`](https://github.com/neo4j/docker-neo4j-publish/blob/81af52f8bfbf341523797c437696a58ae6578af7/4.3.21/enterprise/Dockerfile)
+
+[![arm64v8/neo4j build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/neo4j.svg?label=arm64v8/neo4j%20%20build%20job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/neo4j/)
 
 # Quick reference (cont.)
 
@@ -64,7 +66,7 @@ You can start a Neo4j container like this:
 docker run \
     --publish=7474:7474 --publish=7687:7687 \
     --volume=$HOME/neo4j/data:/data \
-    neo4j
+    arm64v8/neo4j
 ```
 
 which allows you to access neo4j through your browser at [http://localhost:7474](http://localhost:7474).
